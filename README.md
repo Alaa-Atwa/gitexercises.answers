@@ -3,12 +3,9 @@
  this is my attempt for solving these questions, so feel to try your own or share a better solution with me. 
 
 **follow the instructions on the main website to prepare the lab and start practicing from terminal**
-
 ---
 
 # Solutions:
-
----
 
 ## 1: master 
 *this exercise is just to verify everything is working the right way*
@@ -79,7 +76,7 @@ $> git commit -am "completed the save"
 $> git verify
 ```
 
----
+
 
 ## 8: change-branch-history
 *rebase is the keyword here*
@@ -89,7 +86,7 @@ $> git rebase hot-bugfix
 $> git verify 
 ```
 
----
+
 
 ## 9: remove-ignored 
 ```shell
@@ -101,7 +98,7 @@ $> git verify
 *git rm : alone it will delete the file everywhere*
 ```
 
----
+
 
 ## 10: case-sensitive-filename
 ```shell
@@ -113,7 +110,7 @@ $> git verify
 ```
 *git reset HEAD^ --> moves your branch one commit backward and updates working tree.*
 
----
+
 
 ## 11: fix-typo 
 ```shell
@@ -123,7 +120,7 @@ $> git verify
 
 ```
 
----
+
 
 ## 12: forge-date 
 ```shell
@@ -132,7 +129,7 @@ $> git verify
 ```
 *just editing the date without editing commit message or anything*
 
----
+
 
 ## 13: fix-old-typo 
 ```shell
@@ -145,7 +142,7 @@ $> git rebase continue
 $> git verify
 
 ```
----
+
 
 ## 14: commit-lost 
 ```shell
@@ -156,7 +153,7 @@ $> git verify
 
 ```
 
----
+
 
 ## 15: split-commit 
 ```shell
@@ -168,7 +165,7 @@ $> git commit -m "added second file"
 $> git verify
 
 ```
----
+
 
 ## 16: too-many-commits
 ```shell
@@ -176,7 +173,7 @@ $> git rebase --interactive
 *change "pick" from the second commit that sasy "oh, crap.." to be "squash"*
 $> git verify 
 ```
----
+
 
 ## 17: executable
 ```shell
@@ -184,10 +181,9 @@ $> git reset HEAD^
 $> git add script.sh --chmod=+x 
 $> git commit -m "adding the executable script.sh file"
 $> git verify 
-
+# you can use git update-index instead 
 ```
-*you can use git update-index instead* 
----
+
 ## 18: commit-parts
 *using --patch option when adding the file, then s to switch between parts and typing y for wanted parts and n for not wanted parts* 
 ```shell
@@ -200,7 +196,7 @@ $> git commit -am "task 2 parts"
 $> git verify
     
 ```
----
+
 ## 19: pick-your-feature 
 ```shell
 $> git cherry-pick feature-a
@@ -220,7 +216,7 @@ $> git commit -m "finished picking features"
 $> git verify
 
 ```
----
+
 ## 20: rebase-complex 
 *using --onto will solve this exercise easily*
 ```shell
@@ -228,7 +224,7 @@ $> git rebase --onto your-master issue-555 rebase-complex
 $> git verify
 
 ```
----
+
 ## 21: invalid-order 
 ```shell
 $> git rebase --interactive 
@@ -236,11 +232,11 @@ $> git rebase --interactive
 # save 
 $> git verify
 ```
----
+
 ## 22: find-swearwords
 ```shell
 ```
----
+
 
 
 
