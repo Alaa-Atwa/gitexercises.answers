@@ -2,7 +2,7 @@
  this repo contains the solutions for exercises from https://gitexercises.fracz.com 
  this is my attempt for solving these questions, so feel to try your own or share a better solution with me. 
 
-**follow the instructions on the main website to prepare the lap and start practicing from terminal**
+**follow the instructions on the main website to prepare the lab and start practicing from terminal**
 
 ---
 
@@ -22,4 +22,17 @@ $> git verify
 ---
 
 ## 2: commit-one-file 
+
+---
+
+# 8: change-branch-history
+*rebase is the keyword here*
+```
+$> git branch change-branch-history
+$> git rebase hot-bugfix
+$> git verify 
+```
+
+---
+
 
