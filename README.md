@@ -72,6 +72,7 @@ $> git verify
 ## 12: forge-date 
 ```
 $> git commit --amend --no-edit --date="1987-04-01"
+$> git verify
 ```
 *just editing the date without editing commit message or anything*
 
@@ -85,5 +86,151 @@ $> vi file.txt   # and then fix the typo in the file
 $> git add file.txt 
 $> git commit --amend  # fix the typo in the commit message 
 $> git rebase continue 
+$> git verify
 
 ```
+---
+
+## 14: commit-lost 
+```
+*you need to find where was the previous head using reflog then reset to it*
+$> git reflog 
+$> git reset --hard HEAD@{2}
+$> git verify  
+
+```
+
+---
+
+## 15: split-commit 
+```
+$> git reset HEAD^  
+$> git add first.txt 
+$> git commit -m "added first file"
+$> git add second.txt 
+$> git commit -m "added second file"
+$> git verify
+
+```
+---
+
+## 16: too-many-commits
+```
+$> git rebase --interactive   
+*change "pick" from the second commit that sasy "oh, crap.." to be "squash"*
+$> git verify 
+```
+---
+
+## 17: executable
+```
+$> git reset HEAD^
+$> git add script.sh --chmod=+x 
+$> git commit -m "adding the executable script.sh file"
+$> git verify 
+
+```
+*you can use git update-index instead* 
+---
+## 18: commit-parts
+*using patching option when adding the file, then s to shunk and typing y for wanted parts and n for not wanted parts* 
+```
+$> git add -p file.txt* 
+- type s 
+- type y for wanted parts in the first commit (parts has task 1 in it)
+- type n for unwanted parts for the first commit 
+$> git commit -m "task 1 parts"
+$> git commit -am "task 2 parts"
+$> git verify
+    
+```
+---
+## 19: pick-your-feature 
+```
+$> git cherry-pick feature-a
+$> git cherry-pick feature-b
+$> git merge feature-c 
+# solve the conflict by opening the file and removing lines that contain ====== or <<<<< 
+$> git add program.txt 
+$> git commit -m "finished picking features"
+$> git verify
+
+# or in one line 
+
+$> git cherry-pick feature-a feature-b feature-c 
+# solve the confilct as previous 
+$> git add program.txt 
+$> git commit -m "finished picking features"
+$> git verify
+
+```
+---
+## 20: rebase-complex 
+*using --onto will solve this exercise easily*
+```
+$> git rebase --onto your-master issue-555 rebase-complex 
+$> git verify
+
+```
+---
+## 21: invalid-order 
+```
+$> git rebase --interactive 
+# switch the order of commits (commits start with pick keyword)
+# save 
+$> git verify
+```
+---
+## 22: find-swearwords
+```
+```
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
